@@ -75,11 +75,11 @@ unsafe = true
 	
   [[params.social]]
     name = "email"
-    url = "zhangkangweiruan@gmail.com"
+    url = "mailto:zhangkangweiruan@gmail.com"
 
 [params.utteranc]
   enable = true
-  repo = "k1ngram4/myblog" 
+  repo = "ErroristZ/blog" 
   issueTerm = "pathname"
   theme = "github-light"
 
