@@ -4,10 +4,11 @@ date: 2022-08-24T22:21:41+08:00
 draft: true
 toc: false
 images:
-tags: 
-  - untagged
+tags: [              
+    "blog",
+    "deploy"
+]
 ---
-
 
 ## 使用 GitHub Actions 自动化
 

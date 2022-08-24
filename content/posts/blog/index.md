@@ -157,11 +157,11 @@ unsafe = true
 	
   [[params.social]]
     name = "email"
-    url = "zhangkangweiruan@gmail.com"
+    url = "mailto:zhangkangweiruan@gmail.com"
 
 [params.utteranc]
   enable = true
-  repo = "Errorist/blog" 
+  repo = "ErroristZ/blog" 
   issueTerm = "pathname"
   theme = "github-light"
 
@@ -212,7 +212,7 @@ vi web.conf
       listen       80;
       server_name  52yaya.cn;
 
-      root /www/dist;
+      root /home/public;
 
       location / {
           try_files $uri $uri/ /index.html;
