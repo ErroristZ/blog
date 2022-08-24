@@ -29,6 +29,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.BLOG_DEPLOY_KEY }}
-          # 
+          #
           script: |
             cd /home
+            hugo -D
