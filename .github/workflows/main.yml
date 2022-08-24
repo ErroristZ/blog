@@ -22,7 +22,7 @@ jobs:
           FOLDER: ./
           SERVER_IP: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
-          SERVER_DESTINATION: /home/fming/mysite/
+          SERVER_DESTINATION: /home
       - name: Restart server
         uses: appleboy/ssh-action@master
         with:
@@ -31,6 +31,4 @@ jobs:
           key: ${{ secrets.BLOG_DEPLOY_KEY }}
           # 
           script: |
-            cd /home/fming/mysite/
-            python manage.py migrate
-            supervisorctl restart web
+            cd /home
