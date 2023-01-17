@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>很高兴与你相遇！</title>
+    <link>http://52yaya.cn/</link>
+    <description>Recent content on 很高兴与你相遇！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://52yaya.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于</title>
+      <link>http://52yaya.cn/about/</link>
+      <pubDate>Wed, 24 Aug 2022 00:42:06 +0800</pubDate>
+      
+      <guid>http://52yaya.cn/about/</guid>
+      <description>简介 你好，我是Errorist.
+欢迎来到我的博客，目前工作是一名后端攻城狮，爱好很多，例如看足球、旅游、英雄联盟等等。
+工作主语言:php，后续想接触下go、react，博客预计会涉及到一些技术总结、学习笔记、生活等等。也有的技术文章是来自网上平时收藏的不错的文章，如果侵权可以联系我删除。
+我的联系方式可以点击首页或者右上角的图标。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://52yaya.cn/posts/injectipa-userszhangkangdesktopqq_8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://52yaya.cn/posts/injectipa-userszhangkangdesktopqq_8/</guid>
+      <description>injectipa /Users/zhangkang/Desktop/QQ_8.9.13_dump.ipa /Users/zhangkang/Desktop/QQPure.dylib
+tar &amp;ndash;lzma -xvpf /Users/zhangkang/Desktop/data.tar.lzma</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -32,4 +32,6 @@ jobs:
           #
           script: |
             cd /home
-            hugo -D
+            # hugo -D
+            docker build . -t hugo:v1  
+            docker run --rm -it -p 1313:1313 --name hugo -d hugo:v1 server
