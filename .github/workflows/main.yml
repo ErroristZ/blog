@@ -33,6 +33,8 @@ jobs:
           script: |
             cd /home
             # hugo -D
+            docker stop hugo
             docker build . -t hugo:v1  
             # docker run --rm -it -p 1313:1313 --name hugo -d hugo:v1 server
-            docker run --rm -it -v /home/public:/src/public -p 1313:1313 --name hugo -d hugo:v1 server
+            # docker run --rm -it -v /home/public:/src/public -p 1313:1313 --name hugo -d hugo:v1 server
+            docker run --rm -it -v /home/public:/src/public -p 1313:1313 --name hugo -d hugo:v1 -D
