@@ -6,6 +6,43 @@
     <description>Recent content in Tags on 很高兴与你相遇！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://52yaya.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 31 Aug 2022 23:40:14 +0800</lastBuildDate><atom:link href="http://52yaya.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>http://52yaya.cn/tags/blog/</link>
+      <pubDate>Wed, 31 Aug 2022 23:40:14 +0800</pubDate>
+      
+      <guid>http://52yaya.cn/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deploy</title>
+      <link>http://52yaya.cn/tags/deploy/</link>
+      <pubDate>Wed, 31 Aug 2022 23:40:14 +0800</pubDate>
+      
+      <guid>http://52yaya.cn/tags/deploy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hyperf</title>
+      <link>http://52yaya.cn/tags/hyperf/</link>
+      <pubDate>Wed, 31 Aug 2022 23:40:14 +0800</pubDate>
+      
+      <guid>http://52yaya.cn/tags/hyperf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>http://52yaya.cn/tags/php/</link>
+      <pubDate>Wed, 31 Aug 2022 23:40:14 +0800</pubDate>
+      
+      <guid>http://52yaya.cn/tags/php/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -2,15 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://52yaya.cn/tags/blog/</loc>
+    <lastmod>2022-08-31T23:40:14+08:00</lastmod>
+  </url><url>
+    <loc>http://52yaya.cn/tags/deploy/</loc>
+    <lastmod>2022-08-31T23:40:14+08:00</lastmod>
+  </url><url>
+    <loc>http://52yaya.cn/tags/hyperf/</loc>
+    <lastmod>2022-08-31T23:40:14+08:00</lastmod>
+  </url><url>
+    <loc>http://52yaya.cn/tags/php/</loc>
+    <lastmod>2022-08-31T23:40:14+08:00</lastmod>
+  </url><url>
+    <loc>http://52yaya.cn/posts/</loc>
+    <lastmod>2022-08-31T23:40:14+08:00</lastmod>
+  </url><url>
+    <loc>http://52yaya.cn/tags/</loc>
+    <lastmod>2022-08-31T23:40:14+08:00</lastmod>
+  </url><url>
+    <loc>http://52yaya.cn/posts/coding/</loc>
+    <lastmod>2022-08-31T23:40:14+08:00</lastmod>
+  </url><url>
+    <loc>http://52yaya.cn/</loc>
+    <lastmod>2022-08-31T23:40:14+08:00</lastmod>
+  </url><url>
+    <loc>http://52yaya.cn/posts/deploy/</loc>
+    <lastmod>2022-08-24T22:21:41+08:00</lastmod>
+  </url><url>
+    <loc>http://52yaya.cn/posts/blog/</loc>
+    <lastmod>2022-08-24T01:22:44+08:00</lastmod>
+  </url><url>
     <loc>http://52yaya.cn/about/</loc>
     <lastmod>2022-08-24T00:42:06+08:00</lastmod>
   </url><url>
     <loc>http://52yaya.cn/posts/injectipa-userszhangkangdesktopqq_8/</loc>
-  </url><url>
-    <loc>http://52yaya.cn/posts/</loc>
-  </url><url>
-    <loc>http://52yaya.cn/tags/</loc>
-  </url><url>
-    <loc>http://52yaya.cn/</loc>
   </url>
 </urlset>

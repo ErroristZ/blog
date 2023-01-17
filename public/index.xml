@@ -6,7 +6,58 @@
     <description>Recent content on 很高兴与你相遇！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://52yaya.cn/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 31 Aug 2022 23:40:14 +0800</lastBuildDate><atom:link href="http://52yaya.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 CODING 自动化部署 PHP&#43;SWOOLE 框架 Hyperf 项目</title>
+      <link>http://52yaya.cn/posts/coding/</link>
+      <pubDate>Wed, 31 Aug 2022 23:40:14 +0800</pubDate>
+      
+      <guid>http://52yaya.cn/posts/coding/</guid>
+      <description>创建基础项目  首先我们在右上角创建一个项目。  然后选全功能 DevOps 项目，创建好项目。  进入项目后点击右上角，创建一个代码仓库 安装 Hyperf, 或者直接去github拉取hyperf项目，此处不做示范  编写构建计划 首先检出分支，然后会根据分支下的 Dockerfile 生成镜像，然后推送镜像到 coding 的制品仓库。最后登录服务器拉取镜像进行部署。
+创建构建计划  首先我们先创建一个构建计划  然后点击右上角，选择构造计划模板，我们这里选择自定义模板，按照文章最下面配置即可  选择文本编辑器开始进行流程配置前，我们需要先定义一个${IMAGE_NAME}变量。  然后新建一个制品库，就是存放 docker 镜像的地方  点击仓库管理，配置访问令牌   然后复制仓库中的登录和推送命令配置到我们构造计划文件中，我们这里选择使用令牌的方式进行登录，点击这个按钮，复制生成的令牌。替换刚才的登录命令
+  由于登录密码是敏感的，我们按照第一次创建环境变量的方式再次新增一个变量 ${DOCKER_TOKEN} 替换登录密码
+  上面我们注意有个 credentialsId，这个是 coding 能登录我们服务器的关键。这个东西会在 condig 读取秘钥，然后使用秘钥登录我们的服务器进行操作。
+   配置好服务器ssh，确保能连接上去。 生成密钥  ssh-keygen -m PEM -t rsa -b 4096 cd .ssh cat id_rsa.pub &amp;gt;&amp;gt; authorized_keys chmod 600 authorized_keys chmod 700 ~/.</description>
+    </item>
+    
+    <item>
+      <title>使用 GitHub Actions 实现博客自动化部署</title>
+      <link>http://52yaya.cn/posts/deploy/</link>
+      <pubDate>Wed, 24 Aug 2022 22:21:41 +0800</pubDate>
+      
+      <guid>http://52yaya.cn/posts/deploy/</guid>
+      <description>使用 GitHub Actions 自动化 实现代码提交的自动化工作流，要依靠持续集成（或者加上持续交付）服务。现在使用 GitHub Actions 是 GitHub 自家的持续集成及自动化工作流服务。
+建立 SSH 密钥 自行百度，略过
+将自动化配置写到 GitHub 仓库 打开你的网站代码仓库，点击 Settings 标签，找到 Secrets 设定： 选择 Add a new secret，添加一个配置项DEPLOY_KEY，将刚才复制的私钥的内容粘贴在其中。然后，你可以像我上图中一样，把你的服务器 host 、port 和用户名也添加到配置中。这里用户名应该与你上一步操作使用的登录用户一致。
+添加在这里的配置，将只对你可见，不用担心会泄露给他人。
+编写工作流文件 好，准备工作都做好了，现在我们来写自动化工作流的配置。
+在仓库根目录中创建.github/workflows文件夹，再创建一个 YAML 文件，文件名自定，我这里起名叫deploy.yml，所以文件的完整路径应该为.github/workflows/deploy.yml，我将配置的意义写在注释中，文件内容如下：
+name: Deploy site files on: push: branches: - master paths-ignore: - README.md - LICENSE jobs: deploy: runs-on: ubuntu-latest steps: - uses: actions/checkout@v2 - name: Deploy to Server uses: AEnterprise/rsync-deploy@v1.0 env: DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }} ARGS: -avz --delete --exclude=&amp;#39;*.</description>
+    </item>
+    
+    <item>
+      <title>搭建hugo博客记录</title>
+      <link>http://52yaya.cn/posts/blog/</link>
+      <pubDate>Wed, 24 Aug 2022 01:22:44 +0800</pubDate>
+      
+      <guid>http://52yaya.cn/posts/blog/</guid>
+      <description>Hugo简介 Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。
+Hugo使用 安装Hugo 由于我用的是mac系统，直接使用brew，其他系统参考Hugo中文文档
+brew install hugo 检查是否安装成功
+hugo version 然后输出
+hugo v0.92.0+extended darwin/arm64 BuildDate=unknown 就说明安装成功了
+创建blog站点 在当前目录执行命令创建blog站点
+hugo new site blog 这个blog就是项目的名字了，创建的目录如下
+├── archetypes │ └── default.md ├── config.toml # 博客站点的配置文件 ├── content # 博客文章所在目录 ├── data ├── layouts # 网站布局 ├── static # 一些静态内容 └── themes # 博客主题 我们的博客文章就放在content目录下的posts中，只需要按照Markdown格式编写，hugo就会读取到文章然后展示在博客中。
+安装主题 我这里用的是hermit主题，开发者是Track3
+安装依次执行以下命令：
+cd myblog git clone https://github.com/Track3/hermit.git ./themes/hermit 使用主题 将hermit主题中exampleSite目录下的内容拷贝到当前目录blog下
+可以通过修改config.toml文件来更改配置
+贴上我的config.toml文件配置，是抄了煎鱼佬(#^.^#)
+baseURL = &amp;#34;http://52yaya.cn&amp;#34; languageCode = &amp;#34;zh-hans&amp;#34; defaultContentLanguage = &amp;#34;en&amp;#34; title = &amp;#34;很高兴与你相遇！&amp;#34; theme = [&amp;#34;hermit&amp;#34;] # enableGitInfo = true pygmentsCodefences = true pygmentsUseClasses = true # hasCJKLanguage = true # If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.</description>
+    </item>
+    
     <item>
       <title>关于</title>
       <link>http://52yaya.cn/about/</link>
